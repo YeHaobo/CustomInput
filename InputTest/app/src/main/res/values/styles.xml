@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!--Edittext提示字体样式-->
+    <style name="hintInput">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#2b2b2b</item>
+    </style>
+    <!--Edittext字数超出提示样式-->
+    <style name="errorTextInput">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#e73d3d</item>
+    </style>
+    <!--Edittext字数提示样式-->
+    <style name="normalTextInput">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#605f5f</item>
+    </style>
+</resources>
