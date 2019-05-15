@@ -16,6 +16,6 @@ public interface IInput {
     TextInput setMaxText(int max, boolean isShowNum);//设置最大长度
     TextInput setPwdDrawable(boolean isShow);//设置眼睛图标
     TextInput setErrorListener(IInputListener listener);//设置错误提示
-    String getTextContext();
-    void setTextContext(String text);
+    String getTextContext();//获取输入框字符
+    void setTextContext(String text);//设置输入框字符（该方法封闭链式）
 }

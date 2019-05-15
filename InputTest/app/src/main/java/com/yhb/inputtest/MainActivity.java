@@ -13,28 +13,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.textInput = findViewById(R.id.easyInput);
-
-
+        /**
+         * setStartDrawable方法不可与setPwdDrawable方法并用，
+         * 若想在输入框头部添加图片
+         * 则可在XML中设置drawableStart、drawableLeft和drawablePadding属性
+         */
+        /**
+         * setPwdDrawable
+         * 该属性使用前必须设置密文输入不然无效果
+         */
         textInput.isShowLine(true)
                 .setLetterSpac(0.3f)
 //                .setStartDrawable(R.drawable.user,0)
-                /**
-                 * setStartDrawable方法不可与setPwdDrawable方法并用，
-                 * 若想在输入框头部添加图片
-                 * 则可在XML中设置drawableStart、drawableLeft和drawablePadding属性
-                 */
+                .isPassWord(true)
                 .setPwdDrawable(true)
-                /**
-                 * setPwdDrawable
-                 * 该属性使用前必须设置密文输入不然无效果
-                 */
                 .setHintText("是否上浮了？",true)
-                .setMaxText(10,true)
+                .setMaxText(5,true)
                 .setErrorListener(new IInputListener() {
                     @Override
                     public String inputStatus(String str) {
                         if(str !=null ){
-                            if (str.length() > 10)return "已超出十个字符的最大长度";
+                            if (str.length() > 5)return "已超出 5 个字符的最大长度";
                         }
                         return null;
                     }
