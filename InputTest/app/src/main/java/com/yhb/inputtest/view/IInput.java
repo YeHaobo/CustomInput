@@ -18,4 +18,5 @@ public interface IInput {
     TextInput setErrorListener(IInputListener listener);//设置错误提示
     String getTextContext();//获取输入框字符
     void setTextContext(String text);//设置输入框字符（该方法封闭链式）
+
 }
